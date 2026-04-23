@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos - CS Costa e Silva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Fundo azul claro um pouco mais opaco/fechado */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #cbdceb; /* Azul mais opaco que o anterior */
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            flex-grow: 1;
+        }
+
+        /* Título convidativo */
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            color: #1a3c5e;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo dos menus recolhíveis */
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #d1d9e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        summary {
+            padding: 15px 20px;
+            background-color: #f8fbfe;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+        }
+
+        summary::after {
+            content: "▼";
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+            color: #3498db;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        ul {
+            list-style: none;
+            padding: 15px;
+            margin: 0;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        /* Botões de links e PDFs */
+        a {
+            text-decoration: none;
+            color: #444;
+            padding: 12px 15px;
+            display: block;
+            background: #ffffff;
+            border: 1px solid #edf2f7;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        a:hover {
+            background-color: #f0f7ff;
+            border-color: #3498db;
+            color: #2980b9;
+            transform: translateX(5px);
+        }
+
+        .pdf-link::before { content: "📄 "; }
+        .web-link::before { content: "🔗 "; }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #556a7e;
+            margin-top: 30px;
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.4rem; }
+            body { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Documentos para Impressão - CS Costa e Silva</h1>
+        
+        <details[open]>
+            <summary>Links Úteis</summary>
+            <ul>
+                <li><a href="https://www.controleglicemico.med.br/" target="_blank" class="web-link">Assistente de Controle Glicêmico - PEC e-SUS</a></li>
+                <li><a href="https://remedios.campinas.sp.gov.br/" target="_blank" class="web-link">MVCS - Medicamentos e Vacinas nos Centros de Saúde</a></li>
+                <li><a href="https://earth.google.com/earth/d/17Fq2SS71Tuk1HWfi-rHSASFUHVt1ja0I?usp=sharing" target="_blank" class="web-link">Google Earth - Mapa do Território CS Costa e Silva</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Receitas e Formulários</summary>
+            <ul>
+                <li><a href="pdfs/Receituário Comum.pdf" target="_blank" class="pdf-link">Receituário Comum</a></li>
+                <li><a href="pdfs/RECEITUÁRIO CONTROLE ESPECIAL.pdf" target="_blank" class="pdf-link">Receituário Controle Especial</a></li>
+                <li><a href="pdfs/Laudo de Medicamento Especializado (LME) - Farmácia de Alto Custo.pdf" target="_blank" class="pdf-link">LME - Farmácia de Alto Custo</a></li>
+                <li><a href="pdfs/LME GABRIEL - COSTA E SILVA.pdf" target="_blank" class="pdf-link">LME Gabriel - Costa e Silva</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Controles</summary>
+            <ul>
+                <li><a href="pdfs/Controle HiperDia.pdf" target="_blank" class="pdf-link">Cartão de Controle de Hipertensão e Diabetes</a></li>
+
+                <li><a href="pdfs/CONTROLE GLICÊMICO.pdf" target="_blank" class="pdf-link">Controle Glicêmico Domiciliar</a></li>
+                <li><a href="pdfs/MRPA.pdf" target="_blank" class="pdf-link">Monitorização Residencial da Pressão Arterial</a></li>
+                <li><a href="pdfs/CARTÃO DENGUE.pdf" target="_blank" class="pdf-link">Caderneta de Acompanhamento de Dengue e Arboviroses</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Atestado, Evolução, Mini-Mental e SADT</summary>
+            <ul>
+                <li><a href="pdfs/Atestado.pdf" target="_blank" class="pdf-link">Atestado Médico</a></li>
+                <li><a href="pdfs/Evolução Clínica.pdf" target="_blank" class="pdf-link">Ficha de Evolução Clínica</a></li>
+                <li><a href="pdfs/Mini-Exame do Estado Mental.pdf" target="_blank" class="pdf-link">Mini-Exame do Estado Mental</a></li>
+                <li><a href="pdfs/SADT.pdf" target="_blank" class="pdf-link">SADT - Solicitação de Exames</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Orientações Nutricionais</summary>
+            <ul>
+                <li><a href="pdfs/Adolescentes.pdf" target="_blank" class="pdf-link">Adolescentes</a></li>
+                <li><a href="pdfs/Alimentação Saudável.pdf" target="_blank" class="pdf-link">Alimentação Saudável</a></li>
+                <li><a href="pdfs/Anemia.pdf" target="_blank" class="pdf-link">Anemia</a></li>
+                <li><a href="pdfs/Constipação Intestinal.pdf" target="_blank" class="pdf-link">Constipação Intestinal</a></li>
+                <li><a href="pdfs/Crianças.pdf" target="_blank" class="pdf-link">Crianças</a></li>
+                <li><a href="pdfs/Diabetes Mellitus.pdf" target="_blank" class="pdf-link">Diabetes Mellitus</a></li>
+                <li><a href="pdfs/Dieta para Celíacos.pdf" target="_blank" class="pdf-link">Dieta para Celíacos</a></li>
+                <li><a href="pdfs/Disfagia.pdf" target="_blank" class="pdf-link">Disfagia</a></li>
+                <li><a href="pdfs/Dislipidemia.pdf" target="_blank" class="pdf-link">Dislipidemia</a></li>
+                <li><a href="pdfs/Fortalecimento do Sistema Imunológico.pdf" target="_blank" class="pdf-link">Fortalecimento do Sistema Imunológico</a></li>
+                <li><a href="pdfs/Gestantes.pdf" target="_blank" class="pdf-link">Gestantes</a></li>
+                <li><a href="pdfs/Hipertensão Arterial.pdf" target="_blank" class="pdf-link">Hipertensão Arterial</a></li>
+                <li><a href="pdfs/Hiperuricemia.pdf" target="_blank" class="pdf-link">Hiperuricemia</a></li>
+                <li><a href="pdfs/Hipotiroidismo.pdf" target="_blank" class="pdf-link">Hipotiroidismo</a></li>
+                <li><a href="pdfs/Intolerância à Lactose x Alergia ao Leite de Vaca.pdf" target="_blank" class="pdf-link">Intolerância à Lactose x Alergia ao Leite de Vaca</a></li>
+                <li><a href="pdfs/Introdução Alimentar - Aleitamento Artificial.pdf" target="_blank" class="pdf-link">Introdução Alimentar - Aleitamento Artificial</a></li>
+                <li><a href="pdfs/Introdução Alimentar - Amamentação Exclusiva.pdf" target="_blank" class="pdf-link">Introdução Alimentar - Amamentação Exclusiva</a></li>
+                <li><a href="pdfs/Introdução Alimentar - Amamentação Não Exclusiva.pdf" target="_blank" class="pdf-link">Introdução Alimentar - Amamentação Não Exclusiva</a></li>
+                <li><a href="pdfs/Osteoporose.pdf" target="_blank" class="pdf-link">Osteoporose</a></li>
+                <li><a href="pdfs/Refluxo e Gastrite.pdf" target="_blank" class="pdf-link">Refluxo e Gastrite</a></li>
+                <li><a href="pdfs/Sarcopenia.pdf" target="_blank" class="pdf-link">Sarcopenia</a></li>
+                <li><a href="pdfs/Vegetarianismo.pdf" target="_blank" class="pdf-link">Vegetarianismo</a></li>
+            </ul>
+        </details>
+
+    </div>
+
+    <footer>
+        Desenvolvido por Gabriel Cordeiro de Mello Seixas (2026)
+    </footer>
+
+</body>
+</html>
