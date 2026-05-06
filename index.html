@@ -83,6 +83,16 @@
             gap: 8px;
         }
 
+	.lll {
+	    cursor: default;
+	}
+	.lll::after {
+	    content: "";
+	}
+	.login {
+	    padding: 0px 80px;
+	}
+
         /* Botões de links e PDFs */
         a {
             text-decoration: none;
@@ -126,12 +136,21 @@
     <div class="container">
         <h1>Documentos para Impressão - CS Costa e Silva</h1>
         
-        <details[open]>
-            <summary>Links Úteis</summary>
+        <section class="links_uteis">
+            <summary class="lll">Links Úteis</summary>
             <ul>
                 <li><a href="https://www.controleglicemico.med.br/" target="_blank" class="web-link">Assistente de Controle Glicêmico - PEC e-SUS</a></li>
                 <li><a href="https://remedios.campinas.sp.gov.br/" target="_blank" class="web-link">MVCS - Medicamentos e Vacinas nos Centros de Saúde</a></li>
                 <li><a href="https://earth.google.com/earth/d/17Fq2SS71Tuk1HWfi-rHSASFUHVt1ja0I?usp=sharing" target="_blank" class="web-link">Google Earth - Mapa do Território CS Costa e Silva</a></li>
+            </ul>
+        </section>
+
+        <details>
+            <summary>Drive dos Enfermeiros</summary>
+            <ul>
+                <li><a href="https://drive.google.com/drive/home" target="_blank" class="web-link">Google Drive - Enfermeiros CS Costa e Silva</a></li>
+		<li class="login"><strong>Login:</strong> enfermeiros.costaesilva@gmail.com</li>
+		<li class="login"><strong>Senha:</strong> Enfermeiros2026@</li>
             </ul>
         </details>
 
