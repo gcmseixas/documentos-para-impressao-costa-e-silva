@@ -35,12 +35,34 @@
             text-align: center;
             text-transform: uppercase;
             font-size: 1.8rem;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             letter-spacing: 1px;
         }
 
+        /* Estilo da Barra de Pesquisa */
+        .busca-container {
+            margin-bottom: 30px;
+        }
+
+        .busca-input {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            border: 2px solid #cbdceb;
+            border-radius: 8px;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .busca-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+        }
+
         /* Estilo dos menus recolhíveis */
-        details {
+        details, .links_uteis {
             margin-bottom: 15px;
             border: 1px solid #d1d9e0;
             border-radius: 10px;
@@ -48,7 +70,7 @@
             transition: all 0.3s ease;
         }
 
-        summary {
+        summary, .lll {
             padding: 15px 20px;
             background-color: #f8fbfe;
             font-size: 1.2rem;
@@ -60,6 +82,7 @@
             justify-content: space-between;
             align-items: center;
             outline: none;
+            margin: 0;
         }
 
         summary::after {
@@ -83,15 +106,15 @@
             gap: 8px;
         }
 
-	.lll {
-	    cursor: default;
-	}
-	.lll::after {
-	    content: "";
-	}
-	.login {
-	    padding: 0px 80px;
-	}
+        .lll {
+            cursor: default;
+        }
+        .lll::after {
+            content: "";
+        }
+        .login {
+            padding: 0px 80px;
+        }
 
         /* Botões de links e PDFs */
         a {
@@ -136,11 +159,15 @@
     <div class="container">
         <h1>Documentos para Impressão - CS Costa e Silva</h1>
         
+        <div class="busca-container">
+            <input type="text" id="inputPesquisa" class="busca-input" placeholder="Digite para pesquisar um documento...">
+        </div>
+        
         <section class="links_uteis">
             <summary class="lll">Links Úteis</summary>
             <ul>
                 <li><a href="https://www.controleglicemico.med.br/" target="_blank" class="web-link">Assistente de Controle Glicêmico - PEC e-SUS</a></li>
-				<li><a href="https://calculadoraig.vercel.app/" target="_blank" class="web-link">Calculadora de Idade Gestacional</a></li>
+                <li><a href="https://calculadoraig.vercel.app/" target="_blank" class="web-link">Calculadora de Idade Gestacional</a></li>
                 <li><a href="https://remedios.campinas.sp.gov.br/" target="_blank" class="web-link">MVCS - Medicamentos e Vacinas nos Centros de Saúde</a></li>
                 <li><a href="https://earth.google.com/earth/d/17Fq2SS71Tuk1HWfi-rHSASFUHVt1ja0I?usp=sharing" target="_blank" class="web-link">Google Earth - Mapa do Território CS Costa e Silva</a></li>
                 <li><a href="https://sistemas-saude.campinas.sp.gov.br/telessaude/login" target="_blank" class="web-link">Telessaúde - Plataforma de Telematriciamentos</a></li>
@@ -148,34 +175,31 @@
         </section>
 
         <details>
-            <summary>Drive dos Enfermeiros</summary>
-            <ul>
-                <li><a href="https://drive.google.com/drive/home" target="_blank" class="web-link">Google Drive - Enfermeiros CS Costa e Silva</a></li>
-		<li class="login"><strong>Login:</strong> enfermeiros.costaesilva@gmail.com</li>
-		<li class="login"><strong>Senha:</strong> Enfermeiros2026@</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>Receitas e Atestado</summary>
+            <summary>Receitas, Atestado e Laudos</summary>
             <ul>
                 <li><a href="pdfs/Receituário Comum.pdf" target="_blank" class="pdf-link">Receituário Comum</a></li>
                 <li><a href="pdfs/RECEITUÁRIO CONTROLE ESPECIAL.pdf" target="_blank" class="pdf-link">Receituário Controle Especial</a></li>
                 <li><a href="pdfs/Laudo de Medicamento Especializado (LME) - Farmácia de Alto Custo.pdf" target="_blank" class="pdf-link">LME - Farmácia de Alto Custo</a></li>
                 <li><a href="pdfs/Atestado.pdf" target="_blank" class="pdf-link">Atestado Médico</a></li>
+                <li><a href="pdfs/isencaoIRgov.pdf" target="_blank" class="pdf-link">Laudo Pericial para Isenção do Imposto de Renda (IRPF)</a></li>
+                <li><a href="pdfs/PAI_cadastro.pdf" target="_blank" class="pdf-link">PAI Serviços - Ficha de Cadastro</a></li>
                 <li><a href="pdfs/Evolução Clínica.pdf" target="_blank" class="pdf-link">Ficha de Evolução Clínica</a></li>
             </ul>
         </details>
 
         <details>
-            <summary>Controles</summary>
+            <summary>Controles e Testes Rápidos</summary>
             <ul>
                 <li><a href="pdfs/Controle HiperDia.pdf" target="_blank" class="pdf-link">Cartão de Controle de Hipertensão e Diabetes</a></li>
-
                 <li><a href="pdfs/CONTROLE GLICÊMICO.pdf" target="_blank" class="pdf-link">Controle Glicêmico Domiciliar</a></li>
                 <li><a href="pdfs/MRPA.pdf" target="_blank" class="pdf-link">Monitorização Residencial da Pressão Arterial</a></li>
                 <li><a href="pdfs/CARTÃO DENGUE.pdf" target="_blank" class="pdf-link">Caderneta de Acompanhamento de Dengue e Arboviroses</a></li>
-				<li><a href="pdfs/benzetacil.pdf" target="_blank" class="pdf-link">Controle de Tratamento de Sífilis - Benzetacil</a></li>
+                <li><a href="pdfs/fluxograma_dengue.pdf" target="_blank" class="pdf-link">Fluxograma de Manejo de Dengue e Arboviroses - Protocolo Municipal</a></li>
+                <li><a href="pdfs/benzetacil.pdf" target="_blank" class="pdf-link">Controle de Tratamento de Sífilis - Benzetacil</a></li>
+                <li><a href="pdfs/controle_tb.pdf" target="_blank" class="pdf-link">Controle e Acompanhamento de Tuberculose - Benzetacil</a></li>
+                <li><a href="pdfs/supervisionado_tb.pdf" target="_blank" class="pdf-link">Controle de Tratamento Supervisionado de Tuberculose - Benzetacil</a></li>
+                <li><a href="pdfs/testes_rapidos.pdf" target="_blank" class="pdf-link">Resultado de Testes Rápidos de IST</a></li>
+                <li><a href="pdfs/teste_covid.pdf" target="_blank" class="pdf-link">Resultado de Teste Rápido de COVID</a></li>
             </ul>
         </details>
 
@@ -186,23 +210,28 @@
                 <li><a href="pdfs/Mini-Exame do Estado Mental.pdf" target="_blank" class="pdf-link">Mini-Exame do Estado Mental</a></li>
                 <li><a href="pdfs/FICHA_MAMOGRAFIA.pdf" target="_blank" class="pdf-link">Ficha de Solicitação de Mamografia</a></li>
                 <li><a href="pdfs/Oftalmo.pdf" target="_blank" class="pdf-link">Oftalmologia - Checklist complementar para encaminhamento</a></li>
+                <li><a href="pdfs/encaminhamento_dor.pdf" target="_blank" class="pdf-link">Ambulatório da Dor - Protocolo de encaminhamento</a></li>
+                <li><a href="pdfs/escalasDor.pdf" target="_blank" class="pdf-link">Ambulatório da Dor - Escalas de avaliação da dor</a></li>
+                <li><a href="pdfs/orientacoes_CO.pdf" target="_blank" class="pdf-link">Orientações para coleta da Citologia Oncótica</a></li>
+                <li><a href="pdfs/orientacoes_ECG.pdf" target="_blank" class="pdf-link">Orientações para realização do Eletrocardiograma</a></li>
                 <li><a href="pdfs/Labs_PreNatal.pdf" target="_blank" class="pdf-link">Exames Laboratoriais no Pré-Natal - Protocolo Municipal</a></li>
                 <li><a href="https://campinas.sp.gov.br/secretaria/saude/pagina/protocolos-manuais-e-cartilhas" target="_blank" class="web-link">Protocolos Municipais - Campinas</a></li>
             </ul>
-		</details>
+        </details>
 
         <details>
-            <summary>Vacinação</summary>
+            <summary>Vacinação e Curativos</summary>
             <ul>
                 <li><a href="pdfs/CertCORAGEM.pdf" target="_blank" class="pdf-link">Certificado de Coragem</a></li>
-				<li><a href="pdfs/CRIE.pdf" target="_blank" class="pdf-link">CRIE - Formulário de solicitação de Imunibiológicos Especiais</a></li>
-				<li><a href="pdfs/NOTIFICAÇÃO_ANTIRABICA.pdf" target="_blank" class="pdf-link">Ficha de Notificação de Vacina Antirrábica</a></li>
-				<li><a href="pdfs/temperatura_geladeira.pdf" target="_blank" class="pdf-link">Tabela de Controle de Temperatura da Geladeira</a></li>
-				<li><a href="pdfs/NOVO_LOTE.pdf" target="_blank" class="pdf-link">Etiqueta "Novo Lote"</a></li>
-				<li><a href="pdfs/WHATSAPP_Vacina.pdf" target="_blank" class="pdf-link">Ficha para as mães - "Whatsapp da Sala de Vacinas"</a></li>
+                <li><a href="pdfs/CRIE.pdf" target="_blank" class="pdf-link">CRIE - Formulário de solicitação de Imunibiológicos Especiais</a></li>
+                <li><a href="pdfs/NOTIFICAÇÃO_ANTIRABICA.pdf" target="_blank" class="pdf-link">Ficha de Notificação de Vacina Antirrábica</a></li>
+                <li><a href="pdfs/temperatura_geladeira.pdf" target="_blank" class="pdf-link">Tabela de Controle de Temperatura da Geladeira</a></li>
+                <li><a href="pdfs/NOVO_LOTE.pdf" target="_blank" class="pdf-link">Etiqueta "Novo Lote"</a></li>
+                <li><a href="pdfs/WHATSAPP_Vacina.pdf" target="_blank" class="pdf-link">Ficha para as mães - "Whatsapp da Sala de Vacinas"</a></li>
+                <li><a href="pdfs/guia_feridas.pdf" target="_blank" class="pdf-link">Guia de Tratamento de Feridas na Atenção Básica - Protocolo Municipal</a></li>
             </ul>
-		</details>
-		
+        </details>
+        
         <details>
             <summary>Orientações Nutricionais</summary>
             <ul>
@@ -234,21 +263,21 @@
         <details>
             <summary>Treinamentos</summary>
             <ul>
-				<li><a href="pdfs/TreinamentoArbo.pdf" target="_blank" class="pdf-link">Treinamento Arboviroses - Dr Samuel (Fevereiro/26)</a></li>
+                <li><a href="pdfs/TreinamentoArbo.pdf" target="_blank" class="pdf-link">Treinamento Arboviroses - Dr Samuel (Fevereiro/26)</a></li>
                 <li><a href="pdfs/TreinamentoPEC.pdf" target="_blank" class="pdf-link">Treinamento Flash - Atualizações PEC (Março/26)</a></li>
                 <li><a href="pdfs/TreinamentoMatrix.pdf" target="_blank" class="pdf-link">Treinamento Flash - Matrix Net / Laboratório Municipal (Maio/26)</a></li>
             </ul>
         </details>
-		
+        
         <details>
             <summary>Planejamento Familiar</summary>
             <ul>
                 <li><a href="pdfs/Planejamento_Familiar.pdf" target="_blank" class="pdf-link">Protocolo Esterilização Cirúrgica</a></li>
                 <li><a href="pdfs/Planejamento_Familiar_Ficha.pdf" target="_blank" class="pdf-link">Ficha de Encaminhamento Esterilização Cirúrgica</a></li>
                 <li><a href="pdfs/Planejamento_Familiar_Termo.pdf" target="_blank" class="pdf-link">Termo de Declaração Esterilização Cirúrgica</a></li>
-		<li><a href="pdfs/Implanon.pdf" target="_blank" class="pdf-link">TCLE Implante Contraceptivo Subdérmino (Implanon)</a></li>
+                <li><a href="pdfs/Implanon.pdf" target="_blank" class="pdf-link">TCLE Implante Contraceptivo Subdérmino (Implanon)</a></li>
             </ul>
-	</details>
+        </details>
 
         <details>
             <summary>Referenciamento CREAS</summary>
@@ -261,8 +290,49 @@
     </div>
 
     <footer>
-        Desenvolvido por Gabriel Cordeiro de Mello Seixas (2026)
+        Desenvolvido por Gabriel Cordeiro de Mello Seixas (2026)<br>
+	para uso exclusivo dos funcionários do Centro de Saúde Costa e Silva - Campinas
     </footer>
+
+    <script>
+        document.getElementById('inputPesquisa').addEventListener('input', function() {
+            const termoBusca = this.value.toLowerCase().trim();
+            
+            // Seleciona todos os blocos de categorias (tanto details quanto a seção links úteis)
+            const categorias = document.querySelectorAll('details, .links_uteis');
+
+            categorias.forEach(categoria => {
+                const links = categoria.querySelectorAll('ul li');
+                let categoriaTemCorrespondencia = false;
+
+                links.forEach(link => {
+                    const textoLink = link.textContent.toLowerCase();
+                    
+                    // Verifica se o texto do link contém o termo digitado
+                    if (textoLink.includes(termoBusca)) {
+                        link.style.display = ''; // Mostra o link
+                        categoriaTemCorrespondencia = true;
+                    } else {
+                        link.style.display = 'none'; // Esconde o link que não bate com a busca
+                    }
+                });
+
+                // Lógica de exibição do bloco da categoria
+                if (categoriaTemCorrespondencia || termoBusca === '') {
+                    categoria.style.display = ''; // Mostra a categoria inteira
+                    
+                    // Se for um elemento <details> e o usuário estiver digitando, abre automaticamente
+                    if (categoria.tagName.toLowerCase() === 'details' && termoBusca !== '') {
+                        categoria.open = true;
+                    } else if (categoria.tagName.toLowerCase() === 'details' && termoBusca === '') {
+                        categoria.open = false; // Fecha se o campo for limpo
+                    }
+                } else {
+                    categoria.style.display = 'none'; // Esconde a categoria se nenhum link bater
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
